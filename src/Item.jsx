@@ -3,7 +3,11 @@ function Item() {
     <>
       <div className="item-container">
         <div className="item-lhs">
-          <img src="" alt="" className="item-image" />
+          <img
+            src="./src/assets/soap_7.png"
+            alt="Item image"
+            className="item-image h-auto w-96"
+          />
         </div>
         <div className="item-rhs">
           <div className="item-details-container">
