@@ -1,3 +1,4 @@
+import Item from './Item';
 import './App.css';
 
 function Header() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Header />
+      <Item />
     </>
   );
 }
