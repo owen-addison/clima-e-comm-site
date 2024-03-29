@@ -20,6 +20,10 @@ export default {
         fontFamily: {
           sans: ['"M PLUS 1"', 'sans-serif'], // Ensure the font name matches exactly
         },
+        letterSpacing: {
+          'wider-2': '0.2em',
+          'wider-3': '0.3em',
+        },
       },
     },
   },
