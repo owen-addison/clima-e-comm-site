@@ -11,7 +11,7 @@ function Item() {
         </div>
         <div className="item-rhs flex w-80 flex-col content-center justify-center gap-4">
           <div className="item-details-container">
-            <h3 className="item-header">Soap</h3>
+            <h3 className="item-header font-semibold">Soap</h3>
             <ul className="item-ingredients">
               <li className="ingredient">Ingredient 1</li>
               <li className="ingredient">Ingredient 2</li>
