@@ -17,6 +17,9 @@ export default {
           900: '#575855',
           950: '#414240',
         },
+        fontFamily: {
+          sans: ['"M PLUS 1"', 'sans-serif'], // Ensure the font name matches exactly
+        },
       },
     },
   },
