@@ -1,15 +1,15 @@
 function Item() {
   return (
     <>
-      <div className="item-container">
+      <div className="item-container flex content-center justify-center gap-12 p-8">
         <div className="item-lhs">
           <img
             src="./src/assets/soap_7.png"
             alt="Item image"
-            className="item-image h-auto w-96"
+            className="item-image h-auto w-80"
           />
         </div>
-        <div className="item-rhs">
+        <div className="item-rhs flex w-80 flex-col content-center justify-center gap-4">
           <div className="item-details-container">
             <h3 className="item-header">Soap</h3>
             <ul className="item-ingredients">
