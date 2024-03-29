@@ -4,7 +4,7 @@ function Item() {
       <div className="item-container flex content-center justify-center gap-12 p-8">
         <div className="item-lhs">
           <img
-            src="./src/assets/soap_7.png"
+            src="./src/assets/soap_front_crop.png"
             alt="Item image"
             className="item-image h-auto w-80"
           />
