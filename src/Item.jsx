@@ -1,4 +1,14 @@
+import { useState } from 'react';
+
 function Item() {
+  // State to manage view toggle
+  const [isDetailedView, setIsDetailedView] = useState(false);
+
+  // Handler to toggle the view state
+  const toggleView = () => {
+    setIsDetailedView((prev) => !prev);
+  };
+
   return (
     <>
       <div className="item-container flex content-center justify-center gap-12 p-8">
