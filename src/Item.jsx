@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 function Item({ data }) {
   const [isDetailedView, setIsDetailedView] = useState(false);
@@ -53,5 +54,15 @@ function Item({ data }) {
     </div>
   );
 }
+
+// Define the expected prop types
+Item.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+    ingredients: PropTypes.array.isRequired,
+  }).isRequired,
+};
 
 export default Item;
