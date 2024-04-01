@@ -34,7 +34,7 @@ function Item() {
       </div>
       {/* Description box that resizes and then fades in content */}
       <div
-        className={`item-rhs flex flex-col content-center justify-center gap-4 overflow-hidden p-4 transition-all duration-500 ease-in-out ${isDetailedView ? 'w-80' : 'w-0'} ${shouldShowDetails ? 'opacity-100' : 'opacity-0'}`}
+        className={`item-rhs flex flex-col content-center justify-center overflow-hidden transition-all duration-500 ease-in-out ${isDetailedView ? 'w-80 gap-4 p-4' : 'w-0 gap-0 p-0'} ${shouldShowDetails ? 'opacity-100' : 'opacity-0'}`}
       >
         {shouldShowDetails && (
           <>
