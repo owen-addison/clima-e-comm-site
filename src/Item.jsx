@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Item() {
+function Item({ data }) {
   const [isDetailedView, setIsDetailedView] = useState(false);
   const [shouldShowDetails, setShouldShowDetails] = useState(false);
 
@@ -26,8 +26,8 @@ function Item() {
       {/* Image container */}
       <div className="item-lhs cursor-pointer">
         <img
-          src="./src/assets/soap_front_crop.png"
-          alt="Item image"
+          src={data.imageSrc}
+          alt={`${data.name} image`}
           className="item-image h-80 w-auto"
           onClick={toggleView}
         />

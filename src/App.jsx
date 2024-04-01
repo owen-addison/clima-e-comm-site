@@ -1,13 +1,14 @@
+import { useState, useEffect } from 'react';
 import Item from './Item';
 import './App.css';
 
 function Header() {
   return (
     <>
-      <div className="header min-w-screen border-moss-800 flex h-auto content-center justify-between border-b pt-0">
+      <div className="header min-w-screen flex h-auto content-center justify-between border-b border-moss-800 pt-0">
         <div
           id="logo-container"
-          className="text-moss-950 font-sans text-2xl font-light tracking-widest"
+          className="font-sans text-2xl font-light tracking-widest text-moss-950"
         >
           Clima
         </div>
@@ -16,7 +17,7 @@ function Header() {
           className="flex flex-row items-center justify-center"
         >
           <div className="flex items-center justify-center">
-            <p className="text-moss-950 font-sans text-base font-light tracking-wide">
+            <p className="font-sans text-base font-light tracking-wide text-moss-950">
               About
             </p>
           </div>
@@ -27,10 +28,22 @@ function Header() {
 }
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    // Simulate fetching data from an API
+    fetch('/api/items.json')
+      .then((response) => response.json())
+      .then((data) => setItems(data.items))
+      .catch((error) => console.error('Error fetching items:', error));
+  }, []);
+
   return (
     <>
       <Header />
-      <Item />
+      {items.map((item) => (
+        <Item key={item.id} data={item} />
+      ))}
     </>
   );
 }
