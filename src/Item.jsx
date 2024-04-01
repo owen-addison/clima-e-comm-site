@@ -40,14 +40,18 @@ function Item({ data }) {
         {shouldShowDetails && (
           <>
             <div className="item-details-container">
-              <h3 className="item-header font-semibold">Soap</h3>
+              <h3 className="item-header font-semibold">{data.name}</h3>
               <ul className="item-ingredients">
-                <li className="ingredient">Ingredient 1</li>
-                <li className="ingredient">Ingredient 2</li>
-                <li className="ingredient">Ingredient 3</li>
+                {data.ingredients.map((ingredient, index) => (
+                  <li key={index} className="ingredient">
+                    {ingredient}
+                  </li>
+                ))}
               </ul>
             </div>
-            <button className="add-button">Add to basket</button>
+            <button className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950">
+              Add to basket
+            </button>
           </>
         )}
       </div>
