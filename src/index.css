@@ -12,3 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Transitions for image slide and detail box appearance */
+.transition-all {
+  transition: all 0.5s;
+}
