@@ -19,10 +19,11 @@ function App() {
   return (
     <>
       <Header onShowAbout={() => setShowAbout(true)} />
-      {showAbout && <About />}
-      {items.map((item) => (
-        <Item key={item.id} data={item} />
-      ))}
+      {showAbout ? (
+        <About onClose={() => setShowAbout(false)} />
+      ) : (
+        items.map((item) => <Item key={item.id} data={item} />)
+      )}
     </>
   );
 }
