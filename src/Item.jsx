@@ -23,14 +23,16 @@ function Item({ data }) {
   }, [isDetailedView]);
 
   return (
-    <div className="item-container flex content-center justify-center gap-12 p-8">
+    <div
+      className="item-container m-4 flex cursor-pointer content-center justify-center gap-12 p-8 hover:bg-moss-500"
+      onClick={toggleView}
+    >
       {/* Image container */}
-      <div className="item-lhs cursor-pointer">
+      <div className="item-lhs">
         <img
           src={data.imageSrc}
           alt={`${data.name} image`}
           className="item-image h-80 w-auto"
-          onClick={toggleView}
         />
       </div>
       {/* Description box that resizes and then fades in content */}
