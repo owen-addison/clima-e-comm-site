@@ -1,4 +1,4 @@
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Header({ onShowAbout }) {
   return (
@@ -30,7 +30,7 @@ function Header({ onShowAbout }) {
 
 // Define the expected prop types
 Header.propTypes = {
-  onShowAbout: PropTypes.type(func),
+  onShowAbout: PropTypes.func.isRequired,
 };
 
 export default Header;
