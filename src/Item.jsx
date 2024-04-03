@@ -24,15 +24,15 @@ function Item({ data }) {
 
   return (
     <div
-      className="item-container m-4 flex cursor-pointer content-center justify-center gap-12 p-8 hover:bg-moss-500"
+      className="item-container m-4 flex cursor-pointer content-center justify-center gap-12 p-8 hover:bg-moss-500 hover:bg-opacity-40"
       onClick={toggleView}
     >
       {/* Image container */}
-      <div className="item-lhs">
+      <div className="item-lhs p-4">
         <img
           src={data.imageSrc}
           alt={`${data.name} image`}
-          className="item-image h-80 w-auto"
+          className="item-image h-80 w-auto p-4"
         />
       </div>
       {/* Description box that resizes and then fades in content */}
