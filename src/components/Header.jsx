@@ -1,3 +1,8 @@
+// Handler for displaying About section
+const showAbout = () => {
+  console.log('trigger');
+};
+
 function Header() {
   return (
     <>
@@ -13,7 +18,10 @@ function Header() {
           className="flex flex-row items-center justify-center"
         >
           <div className="flex items-center justify-center">
-            <p className="w-16 cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 hover:font-semibold">
+            <p
+              className="w-16 cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 hover:font-semibold"
+              onClick={showAbout}
+            >
               About
             </p>
           </div>
