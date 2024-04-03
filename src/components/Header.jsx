@@ -1,9 +1,6 @@
-// Handler for displaying About section
-const showAbout = () => {
-  console.log('trigger');
-};
+import PropTypes, { func } from 'prop-types';
 
-function Header() {
+function Header({ onShowAbout }) {
   return (
     <>
       <div className="header min-w-screen flex h-auto content-center justify-between border-b border-moss-800 pt-0">
@@ -20,7 +17,7 @@ function Header() {
           <div className="flex items-center justify-center">
             <p
               className="w-16 cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 hover:font-semibold"
-              onClick={showAbout}
+              onClick={onShowAbout}
             >
               About
             </p>
@@ -30,5 +27,10 @@ function Header() {
     </>
   );
 }
+
+// Define the expected prop types
+Header.propTypes = {
+  onShowAbout: PropTypes.type(func),
+};
 
 export default Header;
