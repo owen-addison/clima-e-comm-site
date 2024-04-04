@@ -16,10 +16,11 @@ function Header({ onShowAbout }) {
         >
           <div className="flex items-center justify-center">
             <p
-              className="w-16 cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 hover:font-semibold"
+              className="group w-auto cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 transition duration-300"
               onClick={onShowAbout}
             >
               About
+              <span className="block h-0.5 max-w-0 bg-moss-950 bg-opacity-70 transition-all duration-500 group-hover:max-w-full"></span>
             </p>
           </div>
         </div>
