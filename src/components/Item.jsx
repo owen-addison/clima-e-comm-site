@@ -11,6 +11,11 @@ function Item({ data }) {
     setIsDetailedView((prev) => !prev);
   };
 
+  // Handler for adding to basket
+  const addToBasket = () => {
+    console.log('Add to basket clicked');
+  };
+
   useEffect(() => {
     if (isDetailedView) {
       // Wait for the resize transition of item-rhs to finish before showing details
@@ -51,7 +56,10 @@ function Item({ data }) {
                 ))}
               </ul>
             </div>
-            <button className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950">
+            <button
+              className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950"
+              onClick={addToBasket}
+            >
               Add to basket
             </button>
           </>
