@@ -1,15 +1,8 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-function Item({ data }) {
-  const [isDetailedView, setIsDetailedView] = useState(false);
+function Item({ data, isDetailedView, toggleView }) {
   const [shouldShowDetails, setShouldShowDetails] = useState(false);
-
-  // Handler to toggle the view state
-  const toggleView = () => {
-    // Toggle the detailed view which triggers the resizing of item-rhs
-    setIsDetailedView((prev) => !prev);
-  };
 
   // Handler for adding to basket
   const addToBasket = (event) => {
@@ -78,6 +71,8 @@ Item.propTypes = {
     imageSrc: PropTypes.string.isRequired,
     ingredients: PropTypes.array.isRequired,
   }).isRequired,
+  isDetailedView: PropTypes.bool.isRequired,
+  toggleView: PropTypes.func.isRequired,
 };
 
 export default Item;

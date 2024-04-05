@@ -7,6 +7,13 @@ import './App.css';
 function App() {
   const [items, setItems] = useState([]);
   const [showInfo, setShowInfo] = useState(false);
+  const [activeItemId, setActiveItemId] = useState(null);
+
+  const toggleItemDetail = (id) => {
+    // If the clicked item is already active, close it by setting null
+    // Otherwise, open the clicked item by setting its id
+    setActiveItemId((prevId) => (prevId === id ? null : id));
+  };
 
   useEffect(() => {
     // Simulate fetching data from an API
@@ -22,7 +29,14 @@ function App() {
       {showInfo ? (
         <Info onClose={() => setShowInfo(false)} />
       ) : (
-        items.map((item) => <Item key={item.id} data={item} />)
+        items.map((item) => (
+          <Item
+            key={item.id}
+            data={item}
+            isDetailedView={activeItemId === item.id}
+            toggleView={() => toggleItemDetail(item.id)}
+          />
+        ))
       )}
     </>
   );
