@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 function Header({ onShowInfo }) {
   return (
     <>
-      <div className="header min-w-screen flex h-auto content-center justify-between border-b border-moss-800 pt-0">
+      <div className="header min-w-screen flex h-16 content-center justify-between border-b border-moss-800 pt-0">
         <div
           id="logo-container"
-          className="font-sans text-2xl font-light tracking-widest text-moss-950"
+          className="text-center font-sans text-2xl font-light tracking-widest text-moss-950"
         >
           Clima
         </div>

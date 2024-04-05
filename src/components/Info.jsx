@@ -4,13 +4,14 @@ function Info({ onClose }) {
   return (
     <>
       <div className="info fixed inset-0 z-10 flex flex-col items-start justify-start bg-moss-400">
-        <div className="info-header flex w-full flex-row justify-end px-4">
-          <button
+        <div className="info-header flex h-16 w-full flex-shrink-0 flex-row justify-end px-8 pb-8">
+          <p
+            className="group w-auto cursor-pointer items-center text-center font-sans text-base font-light tracking-wide text-moss-950 transition duration-300"
             onClick={onClose}
-            className="mx-4 rounded bg-moss-700 px-4 py-2 text-white hover:bg-moss-900"
           >
             Close
-          </button>
+            <span className="block h-0.5 max-w-0 bg-moss-950 bg-opacity-70 transition-all duration-500 group-hover:max-w-full"></span>
+          </p>
         </div>
         <div className="info-body flex flex-col items-center justify-center p-8">
           <div className="about-section flex flex-col items-center justify-center p-8">
