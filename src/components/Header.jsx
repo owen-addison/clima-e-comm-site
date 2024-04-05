@@ -19,7 +19,7 @@ function Header({ onShowInfo }) {
               className="group w-auto cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 transition duration-300"
               onClick={onShowInfo}
             >
-              About
+              Info
               <span className="block h-0.5 max-w-0 bg-moss-950 bg-opacity-70 transition-all duration-500 group-hover:max-w-full"></span>
             </p>
           </div>
