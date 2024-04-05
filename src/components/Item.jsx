@@ -12,7 +12,8 @@ function Item({ data }) {
   };
 
   // Handler for adding to basket
-  const addToBasket = () => {
+  const addToBasket = (event) => {
+    event.stopPropagation();
     console.log('Add to basket clicked');
   };
 
@@ -58,7 +59,7 @@ function Item({ data }) {
             </div>
             <button
               className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950"
-              onClick={addToBasket}
+              onClick={(event) => addToBasket(event)}
             >
               Add to basket
             </button>
