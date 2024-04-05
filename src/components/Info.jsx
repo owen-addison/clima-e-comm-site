@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-function About({ onClose }) {
+function Info({ onClose }) {
   return (
     <>
-      <div className="about fixed inset-0 z-10 flex flex-col items-start justify-start bg-moss-400">
-        <div className="about-header flex w-full flex-row justify-end px-4">
+      <div className="info fixed inset-0 z-10 flex flex-col items-start justify-start bg-moss-400">
+        <div className="info-header flex w-full flex-row justify-end px-4">
           <button
             onClick={onClose}
             className="mx-4 rounded bg-moss-700 px-4 py-2 text-white hover:bg-moss-900"
@@ -12,7 +12,7 @@ function About({ onClose }) {
             Close
           </button>
         </div>
-        <div className="about-body flex flex-col items-center justify-center p-8">
+        <div className="info-body flex flex-col items-center justify-center p-8">
           <h1 className="text-xl font-medium">ABOUT</h1>
           <div className="about-text flex w-4/6 flex-col gap-6 p-8">
             <p>
@@ -50,8 +50,8 @@ function About({ onClose }) {
 }
 
 // Define the expected prop types
-About.propTypes = {
+Info.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default About;
+export default Info;

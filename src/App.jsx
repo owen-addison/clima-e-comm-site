@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
-import About from './components/About';
+import Info from './components/Info';
 import Item from './components/Item';
 import './App.css';
 
 function App() {
   const [items, setItems] = useState([]);
-  const [showAbout, setShowAbout] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
     // Simulate fetching data from an API
@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <Header onShowAbout={() => setShowAbout(true)} />
-      {showAbout ? (
-        <About onClose={() => setShowAbout(false)} />
+      <Header onShowInfo={() => setShowInfo(true)} />
+      {showInfo ? (
+        <Info onClose={() => setShowInfo(false)} />
       ) : (
         items.map((item) => <Item key={item.id} data={item} />)
       )}
