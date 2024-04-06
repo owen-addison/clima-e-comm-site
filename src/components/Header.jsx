@@ -6,7 +6,7 @@ function Header({ onShowInfo }) {
       <div className="header min-w-screen flex h-16 content-center justify-between border-b border-moss-800 pt-0">
         <div
           id="logo-container"
-          className="text-center font-sans text-2xl font-light tracking-widest text-moss-950"
+          className="tracking-wider-3 text-center font-sans text-2xl font-light text-moss-950"
         >
           Clima
         </div>
@@ -16,7 +16,7 @@ function Header({ onShowInfo }) {
         >
           <div className="flex items-center justify-center">
             <p
-              className="group w-auto cursor-pointer text-center font-sans text-base font-light tracking-wide text-moss-950 transition duration-300"
+              className="tracking-wider-2 group w-auto cursor-pointer text-center font-sans text-base font-light text-moss-950 transition duration-300"
               onClick={onShowInfo}
             >
               Info

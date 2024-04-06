@@ -6,7 +6,7 @@ function Info({ onClose }) {
       <div className="info fixed inset-0 z-10 flex flex-col items-start justify-start bg-moss-400">
         <div className="info-header flex h-16 w-full flex-shrink-0 flex-row justify-end px-8 pb-8">
           <p
-            className="group w-auto cursor-pointer items-center text-center font-sans text-base font-light tracking-wide text-moss-950 transition duration-300"
+            className="tracking-wider-2 group w-auto cursor-pointer items-center text-center font-sans text-base font-light text-moss-950 transition duration-300"
             onClick={onClose}
           >
             Close
