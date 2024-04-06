@@ -13,9 +13,9 @@ function Info({ onClose }) {
             <span className="block h-0.5 max-w-0 bg-moss-950 bg-opacity-70 transition-all duration-500 group-hover:max-w-full"></span>
           </p>
         </div>
-        <div className="info-body flex flex-col items-center justify-center p-8">
+        <div className="info-body flex flex-col items-center justify-center p-8 font-sans text-moss-950">
           <div className="about-section flex flex-col items-center justify-center p-8">
-            <h1 className="text-xl font-medium">ABOUT</h1>
+            <h1 className=" text-xl font-medium tracking-widest">ABOUT</h1>
             <div className="about-text flex w-4/6 flex-col gap-6 p-8">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -46,7 +46,7 @@ function Info({ onClose }) {
               </p>
             </div>
             <div className="contact-section flex flex-col items-center justify-center p-8">
-              <h1 className="text-xl font-medium">CONTACT</h1>
+              <h1 className="text-xl font-medium tracking-widest">CONTACT</h1>
             </div>
           </div>
         </div>
