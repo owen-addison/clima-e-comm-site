@@ -41,15 +41,17 @@ function Item({ data, isDetailedView, toggleView }) {
       >
         {shouldShowDetails && (
           <>
-            <div className="item-details-container">
+            <div className="item-details-container font-sans tracking-widest text-moss-950">
               <h3 className="item-header font-semibold">{data.name}</h3>
-              <ul className="item-ingredients">
-                {data.ingredients.map((ingredient, index) => (
-                  <li key={index} className="ingredient">
-                    {ingredient}
-                  </li>
-                ))}
-              </ul>
+              <div className="flex flex-col content-center justify-center">
+                <ul className="item-ingredients w-max list-disc self-center text-start">
+                  {data.ingredients.map((ingredient, index) => (
+                    <li key={index} className="ingredient">
+                      {ingredient}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <button
               className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950"
