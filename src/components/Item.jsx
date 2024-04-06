@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 function Item({ data, isDetailedView, toggleView }) {
   const [shouldShowDetails, setShouldShowDetails] = useState(false);
+  const { id } = data;
 
   // Handler for adding to basket
   const addToBasket = (event) => {
     event.stopPropagation();
-    console.log('Add to basket clicked');
+    console.log(`Add item to basket, id = ${id}`);
   };
 
   useEffect(() => {
@@ -52,7 +53,7 @@ function Item({ data, isDetailedView, toggleView }) {
             </div>
             <button
               className="add-button w-max self-center rounded border border-moss-800 bg-moss-800 px-4 py-2 font-semibold text-slate-100 transition-colors duration-200 ease-in-out hover:border-moss-950 hover:bg-moss-950"
-              onClick={(event) => addToBasket(event)}
+              onClick={addToBasket}
             >
               Add to basket
             </button>
