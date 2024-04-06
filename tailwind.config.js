@@ -17,13 +17,29 @@ export default {
           900: '#575855',
           950: '#414240',
         },
-        fontFamily: {
-          sans: ['"M PLUS 1"', 'sans-serif'], // Ensure the font name matches exactly
-        },
-        letterSpacing: {
-          'wider-2': '0.2em',
-          'wider-3': '0.3em',
-        },
+      },
+      fontFamily: {
+        sans: [
+          '"M PLUS 1"',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+      },
+      letterSpacing: {
+        'wider-2': '0.2em',
+        'wider-3': '0.3em',
       },
     },
   },
