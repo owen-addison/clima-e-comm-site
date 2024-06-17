@@ -30,14 +30,20 @@ function App() {
       {showInfo ? (
         <Info onClose={() => setShowInfo(false)} />
       ) : (
-        items.map((item) => (
-          <Item
-            key={item.id}
-            data={item}
-            isDetailedView={activeItemId === item.id}
-            toggleView={() => toggleItemDetail(item.id)}
-          />
-        ))
+        <SnapList
+          direction="vertical"
+          snapAlign="center"
+          itemSize={600} // Adjust this value based on your item size
+        >
+          {items.map((item) => (
+            <Item
+              key={item.id}
+              data={item}
+              isDetailedView={activeItemId === item.id}
+              toggleView={() => toggleItemDetail(item.id)}
+            />
+          ))}
+        </SnapList>
       )}
     </>
   );
