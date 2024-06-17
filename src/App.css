@@ -6,3 +6,10 @@
   padding: 2rem;
   text-align: center;
 }
+
+.item-container {
+  height: 600px; /* Adjust this value based on your item size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
