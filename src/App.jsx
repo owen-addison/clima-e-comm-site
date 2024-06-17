@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Info from './components/Info';
 import Item from './components/Item';
-import { SnapList } from 'react-snaplist-carousel';
 import './App.css';
 
 function App() {
@@ -30,20 +29,14 @@ function App() {
       {showInfo ? (
         <Info onClose={() => setShowInfo(false)} />
       ) : (
-        <SnapList
-          direction="vertical"
-          snapAlign="center"
-          itemSize={600} // Adjust this value based on your item size
-        >
-          {items.map((item) => (
-            <Item
-              key={item.id}
-              data={item}
-              isDetailedView={activeItemId === item.id}
-              toggleView={() => toggleItemDetail(item.id)}
-            />
-          ))}
-        </SnapList>
+        items.map((item) => (
+          <Item
+            key={item.id}
+            data={item}
+            isDetailedView={activeItemId === item.id}
+            toggleView={() => toggleItemDetail(item.id)}
+          />
+        ))
       )}
     </>
   );
