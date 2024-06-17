@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Info from './components/Info';
 import Item from './components/Item';
+import { SnapList } from 'react-snaplist-carousel';
 import './App.css';
 
 function App() {
