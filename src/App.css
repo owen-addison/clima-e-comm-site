@@ -8,8 +8,12 @@
 }
 
 .item-container {
-  height: 600px; /* Adjust this value based on your item size */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  scroll-snap-align: center;
+  height: 100%; /* Adjust this value based on your desired item height */
+}
+
+.item-container-parent {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh; /* Adjust this value based on your desired height */
 }
