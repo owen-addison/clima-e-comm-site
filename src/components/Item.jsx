@@ -32,7 +32,7 @@ function Item({ data, isDetailedView, toggleView }) {
         <img
           src={data.imageSrc}
           alt={`${data.name} image`}
-          className="item-image h-80 w-auto p-4"
+          className="item-image h-96 w-auto p-4"
         />
       </div>
       {/* Description box that resizes and then fades in content */}
