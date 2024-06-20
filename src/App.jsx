@@ -10,13 +10,10 @@ function App() {
   const [activeItemId, setActiveItemId] = useState(null);
 
   const toggleItemDetail = (id) => {
-    // If the clicked item is already active, close it by setting null
-    // Otherwise, open the clicked item by setting its id
     setActiveItemId((prevId) => (prevId === id ? null : id));
   };
 
   useEffect(() => {
-    // Simulate fetching data from an API
     fetch('/api/items.json')
       .then((response) => response.json())
       .then((data) => setItems(data.items))
@@ -24,9 +21,9 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="app-container">
       <Header onShowInfo={() => setShowInfo(true)} />
-      <div className="item-container-parent">
+      <div className="item-container">
         {showInfo ? (
           <Info onClose={() => setShowInfo(false)} />
         ) : (
@@ -40,7 +37,7 @@ function App() {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 }
 
