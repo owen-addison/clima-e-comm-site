@@ -7,13 +7,36 @@
   text-align: center;
 }
 
-.item-container {
-  scroll-snap-align: center;
-  height: 100%; /* Adjust this value based on your desired item height */
+.app-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.item-container-parent {
+.item-container {
+  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  height: 100vh; /* Adjust this value based on your desired height */
+  padding-top: 60px; /* Adjust this value based on your header height */
+}
+
+.item-container > * {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+/* Styles for the Header component */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Adjust the background color and opacity as needed */
+  /* Add any other styles you need for your header */
 }
