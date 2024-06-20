@@ -23,10 +23,7 @@ function Item({ data, isDetailedView, toggleView }) {
   }, [isDetailedView]);
 
   return (
-    <div
-      className="item-container m-4 flex cursor-pointer content-center justify-center gap-12 p-8 hover:bg-moss-500 hover:bg-opacity-40"
-      onClick={toggleView}
-    >
+    <div className="item" onClick={toggleView}>
       {/* Image container */}
       <div className="item-lhs p-4">
         <img
