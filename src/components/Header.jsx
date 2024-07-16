@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Header({ onShowInfo }) {
   return (
     <div className="header min-w-screen z-40 flex h-16 items-center justify-between border-b border-moss-800 px-4">
-      <div className="w-1/4 text-left">
+      <div className="flex w-1/4 items-center">
         <div className="font-sans text-2xl font-light tracking-wider-3 text-moss-950">
           Clima
         </div>
