@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 
 function Info({ onClose }) {
   return (
-    <>
-      <div className="info fixed inset-0 z-10 flex flex-col items-start justify-start bg-moss-400">
-        <div className="info-header flex h-16 w-full flex-shrink-0 flex-row justify-end px-8 pb-8">
-          <p
-            className="tracking-wider-2 group w-auto cursor-pointer items-center text-center font-sans text-base font-light text-moss-950 transition duration-300"
+    <div className="fixed inset-0 z-50 flex flex-col items-start justify-start overflow-y-auto bg-moss-400">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-end pt-6">
+          <button
             onClick={onClose}
+            className="group text-base font-light tracking-wider-2 text-moss-950 transition duration-300"
           >
             Close
             <span className="block h-0.5 max-w-0 bg-moss-950 bg-opacity-70 transition-all duration-500 group-hover:max-w-full"></span>
-          </p>
+          </button>
         </div>
-        <div className="info-body flex flex-col items-center justify-center p-8 font-sans text-moss-950">
-          <div className="about-section flex flex-col items-center justify-center p-8">
-            <h1 className=" text-xl font-medium tracking-widest">ABOUT</h1>
-            <div className="about-text flex w-4/6 flex-col gap-6 p-8">
+        <div className="mt-8 font-sans text-moss-950">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-xl font-medium tracking-widest">ABOUT</h1>
+            <div className="mt-8 w-full max-w-3xl space-y-6">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Et
@@ -45,17 +45,16 @@ function Info({ onClose }) {
                 sollicitudin nibh sit.
               </p>
             </div>
-            <div className="contact-section flex flex-col items-center justify-center p-8">
+            <div className="mt-12">
               <h1 className="text-xl font-medium tracking-widest">CONTACT</h1>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-// Define the expected prop types
 Info.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
