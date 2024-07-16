@@ -1,3 +1,7 @@
+:root {
+  --header-height: 4rem;
+}
+
 body,
 html {
   margin: 0;
@@ -22,13 +26,13 @@ html {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  padding-top: 4rem; /* Adjust this value based on your header height */
+  padding-top: var(--header-height);
 }
 
 .item-container > * {
   scroll-snap-align: start;
   height: 100vh;
-  padding-top: 4rem; /* Adjust this value based on your header height */
+  padding-top: var(--header-height);
 }
 
 /* Styles for the Header component */
@@ -37,12 +41,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  height: 4rem;
+  height: var(--header-height);
   z-index: 1000;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Adjust the background color and opacity as needed */
+  background-color: rgba(255, 255, 255, 0.9);
 }
