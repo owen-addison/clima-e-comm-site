@@ -22,12 +22,13 @@ html {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  padding-top: 60px; /* Adjust this value based on your header height */
+  padding-top: 4rem; /* Adjust this value based on your header height */
 }
 
 .item-container > * {
   scroll-snap-align: start;
   height: 100vh;
+  padding-top: 4rem; /* Adjust this value based on your header height */
 }
 
 /* Styles for the Header component */
@@ -36,6 +37,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
+  height: 4rem;
   z-index: 1000;
   background-color: rgba(
     255,
@@ -43,5 +45,4 @@ html {
     255,
     0.9
   ); /* Adjust the background color and opacity as needed */
-  /* Add any other styles you need for your header */
 }
