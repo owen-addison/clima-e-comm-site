@@ -24,19 +24,16 @@ function App() {
     <div className="app-container">
       <Header onShowInfo={() => setShowInfo(true)} />
       <div className="item-container">
-        {showInfo ? (
-          <Info onClose={() => setShowInfo(false)} />
-        ) : (
-          items.map((item) => (
-            <Item
-              key={item.id}
-              data={item}
-              isDetailedView={activeItemId === item.id}
-              toggleView={() => toggleItemDetail(item.id)}
-            />
-          ))
-        )}
+        {items.map((item) => (
+          <Item
+            key={item.id}
+            data={item}
+            isDetailedView={activeItemId === item.id}
+            toggleView={() => toggleItemDetail(item.id)}
+          />
+        ))}
       </div>
+      {showInfo && <Info onClose={() => setShowInfo(false)} />}
     </div>
   );
 }
